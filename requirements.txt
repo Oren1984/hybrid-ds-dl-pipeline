@@ -1,0 +1,3 @@
+# Dependencies are intentionally minimal.
+# Install only what is required for the pipeline execution.
+

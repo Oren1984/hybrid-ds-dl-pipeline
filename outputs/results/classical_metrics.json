@@ -1,0 +1,6 @@
+{
+  "model": "LogisticRegression",
+  "accuracy": 0.85,
+  "f1_score": 0.8421052631578947,
+  "note": "Trained on synthetic data (baseline placeholder)"
+}

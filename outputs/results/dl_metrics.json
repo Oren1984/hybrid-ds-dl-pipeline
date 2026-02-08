@@ -1,0 +1,9 @@
+{
+  "task": "tabular_classification",
+  "model": "MLPClassifier",
+  "accuracy": 0.925,
+  "f1_score": 0.9210526315789473,
+  "note": "Numeric synthetic data (no text.csv found)",
+  "artifact": "outputs/models/dl_model.joblib",
+  "training_curve_figure": "outputs\\figures\\dl_training_loss_curve.png"
+}

@@ -1,0 +1,9 @@
+{
+  "stage": "Stage 3 - Preprocess",
+  "steps": [
+    "clean_missing_values",
+    "train_test_split",
+    "scaling_encoding"
+  ],
+  "status": "placeholder"
+}

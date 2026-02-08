@@ -1,0 +1,8 @@
+{
+  "project": "hybrid-ds-dl-pipeline",
+  "owner": "Oren (Oren1984)",
+  "stage": "Stage 0 - Frame",
+  "created_at": "2026-02-08T17:22:51.163064",
+  "description": "Hybrid project combining Classical ML and Deep Learning",
+  "primary_metric": "F1-score"
+}

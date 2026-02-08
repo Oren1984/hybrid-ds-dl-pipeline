@@ -1,0 +1,4 @@
+# Minimal ignore rules
+__pycache__/
+.env
+.ipynb_checkpoints/
