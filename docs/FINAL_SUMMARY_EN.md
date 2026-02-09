@@ -1,115 +1,184 @@
-# Hybrid DS + DL Pipeline  Final Summary
+Hybrid DS + DL Pipeline — Final Summary
 
-**Owner:** Oren (Oren1984)  
-**Project:** hybrid-ds-dl-pipeline  
-**Scope:** Applied Hybrid AI (Module 1 + Module 2)
+Owner: Oren (Oren1984)
+Project: hybrid-ds-dl-pipeline
+Scope: Applied Hybrid AI (Module 1 + Module 2)
 
----
+1. Project Goal
 
-## 1. Project Goal
+This project demonstrates a minimal, end-to-end hybrid AI workflow:
 
-This project demonstrates a **minimal, end-to-end hybrid AI workflow**:
+Start with Classical Machine Learning (Module 1)
 
-- Start with **Classical Machine Learning** (Module 1)
-- Establish a strong baseline
-- Introduce **Deep Learning / NLP** only where justified (Module 2)
-- Compare results using a shared metric
-- Persist results in files and databases
+Establish a strong baseline
 
-The focus is **engineering clarity**, not model complexity.
+Introduce Deep Learning / NLP only where justified (Module 2)
 
----
+Compare results using a shared metric
 
-## 2. Pipeline Overview
+Persist results in files and databases
 
-Stages executed (via `stage10_run_all.py`):
+The focus is engineering clarity and decision-making, not model complexity.
 
-0. Frame & metadata  
-1. Data loading (placeholder)  
-2. Quick EDA (placeholder)  
-3. Preprocessing contract  
-4. Classical ML baseline  
-5. Deep Learning / NLP model  
-6. Evaluation & comparison  
-7. SQLite persistence (optional)  
-8. Mongo-style persistence (optional)
+2. Design Rationale — Why a Hybrid Approach
 
----
+This project was intentionally designed as a hybrid DS + DL pipeline, rather than two separate demos.
 
-## 3. Models
+Why start with Classical Machine Learning
 
-### Classical ML
-- Model: Logistic Regression
-- Data: Synthetic tabular (placeholder)
-- Purpose: Fast, interpretable baseline
+Classical ML models are used first to:
 
-### Deep Learning
-- Model: MLPClassifier
-- Modes:
-  - Numeric tabular DL (default)
-  - NLP pipeline (TF-IDF + MLP) if `data/raw/text.csv` exists
-- Purpose: Demonstrate escalation path
+Establish a fast and interpretable baseline
 
----
+Validate that the problem is solvable without unnecessary complexity
 
-## 4. Evaluation Strategy
+Provide a clear reference point for later comparison
 
-- Primary metric: **F1-score**
-- Outputs:
-  - `classical_metrics.json`
-  - `dl_metrics.json`
-  - `final_metrics.json`
-  - `comparison_report.md`
+This stage answers the question:
+“Can this problem be solved effectively with simpler, explainable models?”
 
-A clear winner is selected programmatically.
+Why introduce Deep Learning / NLP later
 
----
+Deep Learning is introduced only after baseline performance is measured, in order to:
 
-## 5. Persistence Layer
+Learn non-linear feature interactions
 
-### SQLite
-- File: `outputs/results/artifacts.db`
-- Stores:
-  - Run metadata
-  - Model metrics
-  - Raw JSON snapshot
+Demonstrate an escalation path when classical methods may be insufficient
 
-### Mongo (Optional)
-- Light schema design
-- Demonstrated via JSON examples
-- Actual insertion skipped unless configured
+Evaluate whether added complexity produces measurable value
 
----
+Why this is a single pipeline
 
-## 6. Key Engineering Principles
+Both approaches operate on the same pipeline and evaluation logic, allowing:
 
-- Artifacts-first design
-- Reproducible from clean environment
-- No hidden state
-- Clear separation between:
-  - Code
-  - Data
-  - Outputs
-  - Documentation
+Direct, fair comparison
 
----
+Clear trade-off analysis
 
-## 7. What This Project Is (and Is Not)
+Real-world applied AI decision flow
 
- Applied engineering demo  
- Hybrid Module 1 + Module 2  
- Runnable end-to-end  
-
- Not a production system  
- Not a platform  
- Not agent-based / RAG
-
----
-
-## 8. Conclusion
-
-This repository reflects **how applied AI projects actually evolve**:
+This reflects how applied AI systems are built in practice:
 start simple, measure, then justify complexity.
 
-The pipeline can later be extended with real datasets,
-advanced models, or production orchestration if needed.
+3. Pipeline Overview
+
+Stages executed (via stage10_run_all.py):
+
+Frame & metadata
+
+Data loading (placeholder)
+
+Quick EDA (placeholder)
+
+Preprocessing contract
+
+Classical ML baseline
+
+Deep Learning / NLP model
+
+Evaluation & comparison
+
+SQLite persistence (optional)
+
+Mongo-style persistence (optional)
+
+4. Models
+Classical ML
+
+Model: Logistic Regression
+
+Data: Synthetic tabular (placeholder)
+
+Purpose: Fast, interpretable baseline
+
+Deep Learning
+
+Model: MLPClassifier
+
+Modes:
+
+Numeric tabular DL (default)
+
+NLP pipeline (TF-IDF + MLP) if data/raw/text.csv exists
+
+Purpose: Demonstrate controlled escalation in model complexity
+
+5. Evaluation Strategy
+
+Primary metric: F1-score
+
+Outputs:
+
+classical_metrics.json
+
+dl_metrics.json
+
+final_metrics.json
+
+comparison_report.md
+
+A clear winner is selected programmatically, based on shared metrics.
+
+6. Persistence Layer
+SQLite
+
+File: outputs/results/artifacts.db
+
+Stores:
+
+Run metadata
+
+Model metrics
+
+Raw JSON snapshots
+
+Mongo (Optional)
+
+Light schema design
+
+Demonstrated via JSON examples
+
+Actual insertion skipped unless configured
+
+7. Key Engineering Principles
+
+Artifacts-first design
+
+Fully reproducible from a clean environment
+
+No hidden state
+
+Clear separation between:
+
+Code
+
+Data
+
+Outputs
+
+Documentation
+
+8. What This Project Is (and Is Not)
+
+This project is:
+
+An applied AI engineering demo
+
+A hybrid Module 1 + Module 2 implementation
+
+Fully runnable end-to-end
+
+This project is not:
+
+A production system
+
+A platform
+
+An agent-based or RAG system
+
+9. Conclusion
+
+This repository reflects how applied AI projects actually evolve:
+start simple, measure results, and justify complexity only when needed.
+
+The pipeline can later be extended with real datasets, advanced models, or production orchestration if required — but those concerns are intentionally out of scope here.
