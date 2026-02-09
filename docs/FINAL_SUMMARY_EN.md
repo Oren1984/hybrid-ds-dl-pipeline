@@ -8,7 +8,7 @@
 
 ---
 
-## Project Goal
+## 🎯 Project Goal
 
 This project demonstrates a **minimal, end-to-end hybrid AI workflow**:
 
